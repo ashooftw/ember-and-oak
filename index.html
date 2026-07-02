@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember & Oak — Wood-Fired Kitchen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.reveal{opacity:1 !important; transform:none !important;}</style></noscript>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav id="nav">
+  <div class="logo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 2C12 2 6 8.5 6 13.5C6 17.09 8.69 20 12 20C15.31 20 18 17.09 18 13.5C18 11.9 17.2 10.2 16 9C16.2 10.4 15.6 11.2 15 11.5C15.5 9 13.8 6.7 12 5.5C12.6 7 12.2 8 11.5 8.5C10.3 9.4 9 10.8 9 13C9 14.66 10.34 16 12 16C13.66 16 15 14.66 15 13" stroke="url(#flameGrad)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <defs>
+        <linearGradient id="flameGrad" x1="6" y1="2" x2="18" y2="20" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#E8A33D"/>
+          <stop offset="1" stop-color="#C1440E"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    Ember <span>&</span> Oak
+  </div>
+  <div class="nav-links">
+    <a href="#story">Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#atmosphere">Atmosphere</a>
+    <a href="#reserve">Reserve</a>
+  </div>
+  <a href="#reserve" class="nav-cta">Book a Table</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#story">Story</a>
+  <a href="#menu">Menu</a>
+  <a href="#atmosphere">Atmosphere</a>
+  <a href="#reserve">Reserve</a>
+  <a href="#reserve" class="btn-primary">Book a Table</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <canvas id="embers"></canvas>
+  <span class="hero-eyebrow">Wood-Fired · Kolkata</span>
+  <h1>Cooked over<br><em>open</em> flame.</h1>
+  <p class="hero-sub">Every dish at Ember & Oak passes through the same hearth — oak-fed, hand-tended, never rushed. It's the oldest way to cook, and we haven't found a reason to change it.</p>
+  <div class="hero-ctas">
+    <a href="#reserve" class="btn-primary">Reserve a Table</a>
+    <a href="#menu" class="btn-ghost">View the Menu</a>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ================= STORY ================= -->
+<section class="story" id="story">
+  <div class="section-inner story-grid">
+    <div class="story-visual reveal">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+    <div class="story-text reveal reveal-1">
+      <span class="eyebrow">Our Story</span>
+      <h2>One hearth. No shortcuts.</h2>
+      <p style="color:rgba(237,228,211,0.72); line-height:1.75; font-size:1.02rem;">
+        Ember & Oak started with a single question: what happens when you strip a kitchen down to fire, wood, and good ingredients? No induction, no shortcuts — just oak logs burning since before service starts, and a menu built entirely around what that fire can do. The char on the bread, the smoke in the butter, the crust on the steak: none of it is added later. It all comes from the same flame.
+      </p>
+      <div class="stat-row">
+        <div class="stat"><span class="num">600°F</span><span class="lbl">Hearth Temp</span></div>
+        <div class="stat"><span class="num">14hr</span><span class="lbl">Daily Burn</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Oak-Fed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section id="menu">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Menu</span>
+      <h2>What the fire makes.</h2>
+      <p>A short menu, changed with the season and whatever the hearth does best that week.</p>
+    </div>
+
+    <div class="menu-tabs reveal reveal-1">
+      <button class="menu-tab active" data-tab="hearth">From the Hearth</button>
+      <button class="menu-tab" data-tab="starters">To Start</button>
+      <button class="menu-tab" data-tab="sides">Sides</button>
+      <button class="menu-tab" data-tab="drinks">Drinks</button>
+    </div>
+
+    <div class="menu-panel active" data-panel="hearth">
+      <div class="menu-list reveal reveal-2">
+        <div class="menu-item">
+          <span class="num">01</span>
+          <span class="name">Oak-Fired Ribeye <span class="tag">Chef's Pick</span></span>
+          <span class="price">₹1,450</span>
+          <p class="desc">Dry-aged 28 days, finished over embers, rested on the bone.</p>
+        </div>
+        <div class="menu-item">
+          <span class="num">02</span><span class="name">Whole Roasted Cauliflower</span><span class="price">₹620</span>
+          <p class="desc">Charred whole, brown-butter glaze, toasted hazelnut.</p>
+        </div>
+        <div class="menu-item">
+          <span class="num">03</span><span class="name">Smoked Tandoori Chicken</span><span class="price">₹780</span>
+          <p class="desc">Marinated 24 hours, cooked low and slow over oak coals.</p>
+        </div>
+        <div class="menu-item">
+          <span class="num">04</span><span class="name">Charred Bhetki</span><span class="price">₹890</span>
+          <p class="desc">Whole river fish, banana leaf, mustard-smoke butter.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-panel" data-panel="starters">
+      <div class="menu-list">
+        <div class="menu-item">
+          <span class="num">01</span><span class="name">Fire-Blistered Peppers</span><span class="price">₹340</span>
+          <p class="desc">Shishito, sea salt, smoked lime.</p>
+        </div>
+        <div class="menu-item">
+          <span class="num">02</span><span class="name">Hearth Bread & Ember Butter</span><span class="price">₹280</span>
+          <p class="desc">Baked in the coal ash, whipped smoked butter.</p>
+        </div>
+        <div class="menu-item">
+          <span class="num">03</span><span class="name">Charred Corn Chaat</span><span class="price">₹310</span>
+          <p class="desc">Grilled corn, tamarind, chili, fresh coriander.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-panel" data-panel="sides">
+      <div class="menu-list">
+        <div class="menu-item">
+          <span class="num">01</span><span class="name">Ash-Roasted Potatoes</span><span class="price">₹260</span>
+          <p class="desc">Buried in embers, crushed, finished with ghee.</p>
+        </div>
+        <div class="menu-item">
+          <span class="num">02</span><span class="name">Smoked Greens</span><span class="price">₹240</span>
+          <p class="desc">Seasonal greens, garlic char, chili oil.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-panel" data-panel="drinks">
+      <div class="menu-list">
+        <div class="menu-item">
+          <span class="num">01</span><span class="name">Smoked Old Fashioned</span><span class="price">₹520</span>
+          <p class="desc">Oak-smoked bourbon, bitters, orange char.</p>
+        </div>
+        <div class="menu-item">
+          <span class="num">02</span><span class="name">Ember Sour</span><span class="price">₹480</span>
+          <p class="desc">Mezcal, charred pineapple, lime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ATMOSPHERE ================= -->
+<section class="atmosphere" id="atmosphere">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow">Atmosphere</span>
+      <h2>Low light. Loud fire.</h2>
+      <p>A small dining room built around the hearth — you can hear the wood burning from every table.</p>
+    </div>
+    <div class="gallery-grid reveal reveal-1">
+      <div class="g-item" data-label="The Hearth"></div>
+      <div class="g-item" data-label="Bar & Coals"></div>
+      <div class="g-item" data-label="Private Table"></div>
+      <div class="g-item" data-label="Late Service"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESERVE ================= -->
+<section class="reserve" id="reserve">
+  <div class="section-inner reveal">
+    <span class="eyebrow">Reserve</span>
+    <h2>Come sit by the fire.</h2>
+    <p>Tables are limited — the hearth only has so much room around it. Book ahead, especially for weekend evenings.</p>
+    <form class="reserve-form" onsubmit="return false;">
+      <input type="text" placeholder="Your name" required>
+      <input type="date" required>
+      <select required>
+        <option value="" disabled selected>Party size</option>
+        <option>2 guests</option>
+        <option>3–4 guests</option>
+        <option>5–8 guests</option>
+        <option>8+ guests</option>
+      </select>
+      <button type="submit" class="btn-primary">Request Table</button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div>
+    <div class="logo">Ember <span>&</span> Oak</div>
+    <p>A wood-fired kitchen in Kolkata, built around a single hearth and a short, honest menu.</p>
+  </div>
+  <div>
+    <h4>Visit</h4>
+    <ul>
+      <li>14 Elgin Road</li>
+      <li>Bhowanipur, Kolkata</li>
+      <li>700020</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Hours</h4>
+    <ul>
+      <li>Tue – Sun: 6pm – 11pm</li>
+      <li>Closed Mondays</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <ul>
+      <li>+91 98300 00000</li>
+      <li>hello@emberandoak.in</li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Ember & Oak. All rights reserved.</span>
+    <span>Design by Ashoo</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
